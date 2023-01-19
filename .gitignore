@@ -16,3 +16,6 @@ abi/IERC721.json
 abi/IERC721Metadata.json
 abi/IERC721Receiver.json
 abi/Ownable.json
+abi/CurrencyTransferLib.json
+abi/IERC20PermitUpgradeable.json
+abi/IERC20Upgradeable.json
