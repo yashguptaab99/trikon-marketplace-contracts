@@ -8,3 +8,11 @@ typechain-types
 #Hardhat files
 cache
 artifacts
+abi/ERC165.json
+abi/ERC721.json
+abi/ERC721URIStorage.json
+abi/IERC165.json
+abi/IERC721.json
+abi/IERC721Metadata.json
+abi/IERC721Receiver.json
+abi/Ownable.json

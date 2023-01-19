@@ -11,6 +11,7 @@ require("dotenv").config();
 const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL;
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const MNEMONIC = process.env.MNEMONIC;
 const FORKING_BLOCK_NUMBER = process.env.FORKING_BLOCK_NUMBER;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const REPORT_GAS = process.env.REPORT_GAS || false;
@@ -26,6 +27,7 @@ module.exports = {
                 enabled: false,
             },
             chainId: 31337,
+            allowUnlimitedContractSize: true,
         },
         localhost: {
             chainId: 31337,
@@ -33,8 +35,11 @@ module.exports = {
         goerli: {
             url: GOERLI_RPC_URL,
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+            // accounts: {
+            //     mnemonic: MNEMONIC,
+            // },
             saveDeployments: true,
-            chainId: 4,
+            chainId: 5,
         },
         mainnet: {
             url: MAINNET_RPC_URL,
@@ -48,7 +53,7 @@ module.exports = {
         settings: {
             optimizer: {
                 enabled: true,
-                runs: 500,
+                runs: 200,
             },
         },
     },
