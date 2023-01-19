@@ -1,0 +1,49 @@
+{
+    "name": "trikon-marketplace-contracts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "contract-size": "npx hardhat size-contracts",
+        "test": "npx hardhat test test/unit/*.test.js --network hardhat",
+        "test-staging": "npx hardhat test test/staging/*.test.js --network goerli",
+        "lint": "npx eslint . && npx solhint 'contracts/*.sol'",
+        "lint:fix": "npx eslint . --fix &&npx solhint 'contracts/**/*.sol' --fix",
+        "format": "prettier --write .",
+        "coverage": "npx hardhat coverage --solcoverjs ./.solcover.js",
+        "docgen": "npx solidity-docgen -i ./contracts -o ./docs -t docgen --solc-module solc -H docgen/helpers.js",
+        "deploy:goerli": "npx hardhat run --network goerli scripts/deploy.js",
+        "upgrade:goerli": "npx hardhat run --network goerli scripts/update.js",
+        "verify:goerli": "npx hardhat verify --network goerli --contract",
+        "prepare": "npx husky install"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.9",
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "eslint": "^8.21.0",
+        "eslint-config-prettier": "^8.5.0",
+        "hardhat": "^2.10.1",
+        "hardhat-abi-exporter": "^2.10.0",
+        "hardhat-contract-sizer": "^2.6.1",
+        "hardhat-deploy": "^0.11.12",
+        "husky": "^8.0.1",
+        "mocha": "^10.0.0",
+        "prettier": "^2.7.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.24",
+        "solc": "^0.8.10",
+        "solhint": "^3.3.7",
+        "solidity-docgen": "^0.5.13"
+    },
+    "dependencies": {
+        "@openzeppelin/contracts": "^4.7.3",
+        "@openzeppelin/contracts-upgradeable": "^4.7.3",
+        "@openzeppelin/hardhat-upgrades": "^1.20.0",
+        "dotenv": "^16.0.1"
+    }
+}
