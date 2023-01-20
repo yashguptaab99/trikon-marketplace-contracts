@@ -1,6 +1,8 @@
 # Trikon Marketplace contracts
 
-This is Trikon Marketplace contracts
+This is Trikon Marketplace contracts  
+TrikonERC721Mintable - [0x4A2Cf26FeF2e6eb0A8a93245af2F734d1F579Da0](https://goerli.etherscan.io/address/0x4A2Cf26FeF2e6eb0A8a93245af2F734d1F579Da0#code)  
+TrikonMarketplace - [0x3be4dc661Aa0148208559858724A5AC18B8614b3](https://goerli.etherscan.io/address/0x3be4dc661Aa0148208559858724A5AC18B8614b3#code)
 
 ### Tools
 
